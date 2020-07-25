@@ -1,0 +1,5 @@
+{
+  "name": "required",
+  "email": "required|email",
+  "age": "min:18"
+}
