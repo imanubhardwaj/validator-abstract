@@ -1,6 +1,6 @@
 {
   "name": "validator-abstract",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Validation of requests in Node.",
   "keywords": [
     "Validation",

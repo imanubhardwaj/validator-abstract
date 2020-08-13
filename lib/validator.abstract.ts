@@ -18,7 +18,12 @@ export abstract class ValidatorAbstract {
     const result = new Validator(data, rules);
     if (result.fails()) {
       const {errors} = result;
-      throw Object.keys(errors.errors).map(key => ({key, message: errors.get(key).join(" ")}));
+      throw {
+        statusCode: 422,
+        message: "Validation failed.",
+        errorCode: 2,
+        meta: Object.keys(errors.errors).map(key => ({key, message: errors.get(key).join(" ")}))
+      };
     }
   }
 }
